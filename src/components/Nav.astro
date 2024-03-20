@@ -23,10 +23,10 @@ const navData = [
         {
             navData.map((i) => (
                 <li>
-                    <a href={ i.href }>
+                    <a href={ i.href } aria-label={i.icon && i.title}>
                         { i.icon
                             &&
-                                <Icon name={i.icon} size={48} aria-label={i.icon && i.title}  />
+                                <Icon name={i.icon} size={48} aria-hidden="true"  />
                             }
                         { !i.icon && i.title }
                     </a>    
