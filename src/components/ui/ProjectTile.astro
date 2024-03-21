@@ -1,9 +1,14 @@
 ---
+// Astro tools
 import Image from "astro/components/Image.astro";
 import type { CollectionEntry } from "astro:content";
-import Heading from "./Heading.astro";
-import { Icon } from "astro-icon/components";
 import { getEntries } from "astro:content";
+
+// Astro integrations
+import { Icon } from "astro-icon/components";
+
+// components
+import Heading from "./Heading.astro";
 
 type Props = {
     data: CollectionEntry<"projects">["data"];
