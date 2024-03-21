@@ -17,13 +17,13 @@ const tools = defineCollection({
     }),
 });
 
-const project = defineCollection({
+const projects = defineCollection({
     type: "data",
     schema: ({ image }) =>
         z.object({
             title: z.string(),
             thumbnail: image(),
-            icon: z.array(reference("tools")),
+            icons: z.array(reference("tools")),
             url: z.string().url(),
         }),
 });
@@ -31,5 +31,5 @@ const project = defineCollection({
 export const collections = {
     features,
     tools,
-    project,
+    projects,
 }
