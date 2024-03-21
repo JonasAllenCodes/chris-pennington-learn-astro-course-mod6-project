@@ -7,12 +7,14 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "database": "json-server --watch db.json"
   },
   "dependencies": {
     "@astrojs/check": "^0.5.9",
     "astro": "^4.5.6",
     "astro-icon": "^1.1.0",
+    "json-server": "^1.0.0-alpha.23",
     "typescript": "^5.4.2"
   }
 }
