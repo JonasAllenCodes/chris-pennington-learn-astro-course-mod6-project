@@ -19,6 +19,6 @@ import { Icon } from "astro-icon/components";
 </footer>
 
 <script>
-    const copyrightSpan: HTMLSpanElement = document.querySelector("#copyright");
+    const copyrightSpan: HTMLSpanElement = document.querySelector("#copyright") as HTMLScriptElement;
     copyrightSpan.textContent = new Date().getFullYear().toString();
 </script>
