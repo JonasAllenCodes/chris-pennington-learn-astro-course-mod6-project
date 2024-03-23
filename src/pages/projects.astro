@@ -106,9 +106,9 @@ if (filterItems.length > 0) {
 	import setNewURLParams from "@/lib/setNewURLParams";
 
 	// query selectors
-	const filters = document.querySelectorAll("[data-tool]") as NodeListOf<HTMLButtonElement>;
 	const clearAllBtn = document.querySelector("#close-all");
-
+	const filters = document.querySelectorAll("[data-tool]") as NodeListOf<HTMLButtonElement>;
+	
 	// clear all
 	clearAllBtn?.addEventListener("click", () => {
 		window.location.href = "projects";
