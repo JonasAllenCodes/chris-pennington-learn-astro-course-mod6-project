@@ -1,0 +1,15 @@
+---
+// layouts
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+// Astro tools
+import { getEntry } from "astro:content"
+import PostCard from "../../components/ui/PostCard.astro";
+
+// collections
+const postEntry = await getEntry("posts", "bring-out-your-inner-artist");
+---
+
+<BaseLayout title="Blog">
+    <PostCard post={postEntry} />
+</BaseLayout>

@@ -1,0 +1,37 @@
+---
+// Astro tools
+import { Image } from 'astro:assets';
+import { type CollectionEntry } from 'astro:content';
+
+// components
+import Heading from './Heading.astro';
+import FormattedDate from './FormattedDate.astro';
+import Link from "@/components/ui/Link.astro";
+
+// types
+type Props = {
+    post: CollectionEntry<"posts">;
+}
+
+// props
+const { post } = Astro.props;
+const { title, description, image, pubDate } = post.data;
+---
+
+<article aria-label={title} class="post-card">
+    <div>
+        <Image src={image} alt={title} width={400} height={200} format="avif" />
+        <div class="content">
+            <d class="rows">
+                <div>
+                    <Heading tagName="h3" size="h4">
+                        <a href={`/blog/${post.slug}/`}>{title}</a>
+                    </Heading>
+                    <FormattedDate pubDate={pubDate} />
+                </div>
+                <p>{description}</p>
+                <Link href={`/blog/${post.slug}/`}>Read Post</Link>
+            </div>
+        </div>    
+    </div>
+</article>
